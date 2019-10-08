@@ -7,6 +7,8 @@ testimonial: "At goldbug we are defined by our successful partnerships. We partn
   \ to bring innovation, convenience, value and quality fashions.   \nOne of our\
   \ longest standing and most treasured partnerships is with Carter\u2019s.\n\n "
 published: 2017-02-24 00:48:56.511083+00:00
+layout: templates/pages/home.html
+permalink: /
 
 ---
 
