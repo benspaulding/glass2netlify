@@ -26,17 +26,17 @@ def iter_pages(domain):
     while pages:
         page = pages.popleft()
 
-        if 'path' not in page:
+        if "path" not in page:
             pprint(page)
 
         yield page.copy()
 
-        for child in page.get('children', []):
+        for child in page.get("children", []):
             resp = http.get(f"http://{domain}/{child['path']}.json")
             resp.raise_for_status()
             cdata = resp.json()
-            assert cdata['path'] == child['path']
-            assert cdata['parent']  # == ???
+            assert cdata["path"] == child["path"]
+            assert cdata["parent"]  # == ???
             pages.append(cdata)
 
     assert not pages
